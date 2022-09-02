@@ -3,7 +3,7 @@
 The format of an Akamai Mobile SDK (BMP) sensor string is (depending on version);
 > 1,a,\<Encrypted AES Key\>,\<Encrypted HMAC SHA-256 Key\>$\<Sensor\>\$<Timestamps\>
 
-The AES Key and HMAC key are encrypted using an RSA public key and the sensor is encrypted using AES-128-CBC.
+The AES Key (used to encrypt the sensor) and HMAC key are encrypted using an RSA public key and the sensor is encrypted using AES-128-CBC.
 
 It is not possible to decrypt the AES or HMAC key without the matching RSA private key. Therefore, to decrypt the sensor, you must know the matching unencrypted AES key used for encryption.
 
